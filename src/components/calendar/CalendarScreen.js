@@ -5,6 +5,8 @@ import { CalendarModal } from './CalendarModal';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import { messages } from '../../helpers/claedar-messages-es';
+import { useDispatch } from 'react-redux';
+import { uiOpenModal } from '../../actions/ui';
 
 moment.locale('es')
 const localizer = momentLocalizer(moment) // or globalizeLocalizer
@@ -23,14 +25,17 @@ const events = [{
 
 export const CalendarScreen = () => {
 
+    const dispatch = useDispatch()
+
     const [lastView, setLastView] = useState(localStorage.getItem('lastView') || 'month')
 
     const onDoubleClick = (e) => {
-        console.log(e);
+        console.log('Opening');
+        dispatch(uiOpenModal())
     }
 
     const onSelectEvent = (e) => {
-        console.log(e);
+        // console.log(e);
     }
 
     const onViewChange = (e) => {
