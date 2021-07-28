@@ -5,7 +5,7 @@ import { CalendarModal } from './CalendarModal';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import { messages } from '../../helpers/claedar-messages-es';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { uiOpenModal } from '../../actions/ui';
 import { eventSetActive } from '../../actions/events';
 import { AddNewFab } from '../ui/AddNewFab';
@@ -13,32 +13,19 @@ import { AddNewFab } from '../ui/AddNewFab';
 moment.locale('es')
 const localizer = momentLocalizer(moment) // or globalizeLocalizer
 
-const events = [{
-    title: 'Spacieal day',
-    start: moment().toDate(),
-    end: moment().add(2, 'hours').toDate(),
-    bgcolor: '#fafafa',
-    notes: 'buy',
-    user: {
-        _id: '1234',
-        name: 'Victor'
-    }
-}]
-
 export const CalendarScreen = () => {
 
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
+    const { events } = useSelector(state => state.calendar);
 
     const [lastView, setLastView] = useState(localStorage.getItem('lastView') || 'month')
 
     const onDoubleClick = (e) => {
-        console.log('Opening');
         dispatch(uiOpenModal())
     }
 
     const onSelectEvent = (e) => {
         dispatch(eventSetActive(e));
-        dispatch(uiOpenModal());
     }
 
     const onViewChange = (e) => {
