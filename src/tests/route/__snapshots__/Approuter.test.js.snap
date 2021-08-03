@@ -1015,7 +1015,7 @@ exports[`TEst on Approuter should show the public route 1`] = `
               onChange={[Function]}
               placeholder="Correo"
               type="text"
-              value="abi@gmail.com"
+              value=""
             />
           </div>
           <div
@@ -1027,7 +1027,7 @@ exports[`TEst on Approuter should show the public route 1`] = `
               onChange={[Function]}
               placeholder="Contraseña"
               type="password"
-              value="123456"
+              value=""
             />
           </div>
           <div
@@ -1059,7 +1059,7 @@ exports[`TEst on Approuter should show the public route 1`] = `
               onChange={[Function]}
               placeholder="Nombre"
               type="text"
-              value="Nadia"
+              value=""
             />
           </div>
           <div
@@ -1071,7 +1071,7 @@ exports[`TEst on Approuter should show the public route 1`] = `
               onChange={[Function]}
               placeholder="Correo"
               type="email"
-              value="nadia@gmail.com"
+              value=""
             />
           </div>
           <div
@@ -1083,7 +1083,7 @@ exports[`TEst on Approuter should show the public route 1`] = `
               onChange={[Function]}
               placeholder="Contraseña"
               type="password"
-              value="123456"
+              value=""
             />
           </div>
           <div
@@ -1095,7 +1095,7 @@ exports[`TEst on Approuter should show the public route 1`] = `
               onChange={[Function]}
               placeholder="Repita la contraseña"
               type="password"
-              value="123456"
+              value=""
             />
           </div>
           <div
